@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RuralReact - Smart Water Monitoring</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#e0f7fa,#e8f5e9);
+    color:#333;
+}
+
+/* Navbar */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px 8%;
+    background:white;
+    box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:24px;
+    font-weight:700;
+    color:#00796b;
+}
+
+.logo img{
+    height:80px;
+    width:auto;
+}
+
+
+.founder{
+    font-size:14px;
+    color:#555;
+}
+
+/* Hero Section */
+.hero{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero h1{
+    font-size:48px;
+    color:#004d40;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:18px;
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.btn{
+    margin-top:30px;
+    padding:12px 30px;
+    background:#00796b;
+    color:white;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#004d40;
+}
+
+/* Features */
+.section{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.section h2{
+    font-size:36px;
+    margin-bottom:40px;
+    color:#004d40;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#00796b;
+}
+
+/* About */
+.about{
+    background:#ffffff;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#004d40;
+    color:white;
+    margin-top:50px;
+}
+
+/* Animation */
+.fade-in{
+    opacity:0;
+    transform:translateY(20px);
+    transition:0.8s ease-in-out;
+}
+
+.fade-in.active{
+    opacity:1;
+    transform:translateY(0);
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">
+    <img src="logo.jpeg" alt="RuralReact Logo">
+    <span>RuralReact</span>
+    </div>
+    <div class="founder">Founder & Owner: Pranav Prajapati</div>
+</nav>
+
+<section class="hero">
+    <h1>Smart IoT-Based Water Quality Monitoring</h1>
+    <p>
+        RuralReact is an advanced ESP32-based IoT device designed for real-time
+        water quality monitoring. It senses and collects data including pH, ORP,
+        Temperature, and Electrical Conductivity (EC) and sends it to a mobile application.
+    </p>
+    <button class="btn" onclick="scrollToSection()">Explore Features</button>
+</section>
+
+<section class="section fade-in" id="features">
+    <h2>Device Capabilities</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>🌡 Temperature Monitoring</h3>
+            <p>Measures water temperature accurately in real-time using advanced sensors.</p>
+        </div>
+        <div class="card">
+            <h3>⚗ pH Detection</h3>
+            <p>Detects acidity and alkalinity levels to ensure safe and healthy water.</p>
+        </div>
+        <div class="card">
+            <h3>⚡ ORP Sensing</h3>
+            <p>Monitors oxidation-reduction potential for water purity analysis.</p>
+        </div>
+        <div class="card">
+            <h3>💧 EC Monitoring</h3>
+            <p>Measures Electrical Conductivity to determine dissolved salt levels.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section about fade-in">
+    <h2>How It Works</h2>
+    <p style="max-width:800px;margin:auto;">
+        The RuralReact device is powered by ESP32 microcontroller technology.
+        It collects sensor data and transmits it wirelessly to a dedicated
+        mobile application. Users can monitor live water quality parameters,
+        view historical data, and receive alerts if water conditions exceed safe limits.
+    </p>
+</section>
+
+<section class="section fade-in">
+    <h2>Mobile Application Integration</h2>
+    <p style="max-width:800px;margin:auto;">
+        Our IoT-based mobile application provides real-time dashboards,
+        graphical reports, and notifications. This enables rural communities,
+        farmers, and water treatment systems to ensure clean and safe water.
+    </p>
+</section>
+
+<footer>
+    © 2026 RuralReact | Designed & Developed by Pranav Prajapati
+</footer>
+
+<script>
+function scrollToSection(){
+    document.getElementById("features").scrollIntoView({behavior:"smooth"});
+}
+
+// Scroll Animation
+const faders = document.querySelectorAll('.fade-in');
+
+window.addEventListener('scroll', () => {
+    faders.forEach(fade => {
+        const rect = fade.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 100){
+            fade.classList.add('active');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
