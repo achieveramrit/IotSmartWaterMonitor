@@ -213,6 +213,14 @@ nav{
     margin-bottom:15px;
     color:#00796b;
 }
+.button-group{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
 
 /* About */
 .about{
@@ -220,7 +228,6 @@ nav{
 }
 .secondary-btn{
     background:#004d40;
-    margin-left:15px;
 }
 
 .secondary-btn:hover{
@@ -248,6 +255,58 @@ footer{
     opacity:1;
     transform:translateY(0);
 }
+
+.motto{
+    margin-top:15px;
+    font-size:20px;
+    font-weight:500;
+    color:#00796b;
+}
+@media (max-width:768px){
+    .motto{
+        font-size:16px;
+        padding:0 10px;
+    }
+}
+.subscribe-btn{
+    background:#ff9800;
+}
+
+.subscribe-btn:hover{
+    background:#e68900;
+}
+.footer-links{
+    margin-bottom:10px;
+    cursor:pointer;
+}
+
+.footer-links span{
+    color:#ffffff;
+    text-decoration:underline;
+    margin:0 5px;
+}
+
+.legal-section{
+    display:none;
+    padding:60px 10%;
+    background:#ffffff;
+    text-align:left;
+}
+
+.legal-section h2{
+    margin-bottom:20px;
+    color:#004d40;
+}
+
+.legal-section ul{
+    line-height:1.8;
+}
+
+.legal-section button{
+    margin-top:20px;
+}
+
+
 </style>
 </head>
 <body>
@@ -262,20 +321,31 @@ footer{
 
 <section class="hero">
     <h1>Smart IoT Plus PLC kit Based Multi parameter Monitoring</h1>
+    <h3 class="motto">
+    Designed for Rural MSME, ETP, Hydroponic & Chemical Units
+    </h3>
+
     <p>
         RuralReact is an advanced ESP32-based IoT plus PLC device designed for real-time
         multi-parameter quality monitoring. It senses and collects data including pH, ORP,
         Temperature, and Electrical Conductivity (EC) and sends it to a mobile application.
     </p>
+    <div class="button-group">
     <button class="btn" onclick="scrollToSection()">Explore Features</button>
     <button class="btn secondary-btn" onclick="openGuide()">
-    Smart Parameter Guide
+        Smart Parameter Guide
     </button>
+    <button class="btn subscribe-btn" onclick="comingSoon()">
+    Subscription Plans
+    </button>
+
+    </div>
+
 
 </section>
 
 <section class="section fade-in" id="features">
-    <h2>Device Capabilities</h2>
+    <h2>Device Features</h2>
     <div class="cards">
         <div class="card">
             <h3>🌡 Temperature Monitoring</h3>
@@ -335,10 +405,35 @@ footer{
         </div>
     </div>
 </section>
+<section id="termsSection" class="legal-section">
+    <h2>Terms of Use – RuralReact</h2>
+    <ul>
+        <li>RuralReact provides monitoring tools for industrial, agricultural, and environmental use.</li>
+        <li>Data displayed is for operational assistance; users must follow local safety regulations.</li>
+        <li>Unauthorized copying, modification, or reverse engineering of software or hardware is prohibited.</li>
+        <li>RuralReact is not responsible for damages caused by improper installation or misuse.</li>
+        <li>By using this system, you agree to these terms.</li>
+    </ul>
+    <button class="btn" onclick="closeLegal()">Close</button>
+</section>
+<section id="privacySection" class="legal-section">
+    <h2>Privacy Policy – RuralReact</h2>
+    <p>
+        RuralReact respects user privacy. Any monitoring data collected is used
+        strictly for operational analysis and system performance improvement.
+        We do not sell or share data with third parties without consent.
+    </p>
+    <button class="btn" onclick="closeLegal()">Close</button>
+</section>
 
 <footer>
-    © 2026 RuralReact | Designed & Developed by Pranav Prajapati
+    <div class="footer-links">
+        <span onclick="showTerms()">Terms of Use</span> |
+        <span onclick="showPrivacy()">Privacy Policy</span>
+    </div>
+    <p>© 2026 RuralReact | Designed & Developed by Pranav Prajapati</p>
 </footer>
+
 
 <script>
 function scrollToSection(){
@@ -346,6 +441,25 @@ function scrollToSection(){
 }
 function openGuide(){
     alert("Smart Parameter Guide coming soon! 🚀\n\nThis will display real-time monitoring dashboard once API is integrated.");
+}
+function comingSoon(){
+    alert("Subscription feature coming soon! 🚀\nWe will launch it with full monitoring API access.");
+}
+function showTerms(){
+    document.getElementById("termsSection").style.display = "block";
+    document.getElementById("privacySection").style.display = "none";
+    window.scrollTo({top: document.body.scrollHeight, behavior: "smooth"});
+}
+
+function showPrivacy(){
+    document.getElementById("privacySection").style.display = "block";
+    document.getElementById("termsSection").style.display = "none";
+    window.scrollTo({top: document.body.scrollHeight, behavior: "smooth"});
+}
+
+function closeLegal(){
+    document.getElementById("termsSection").style.display = "none";
+    document.getElementById("privacySection").style.display = "none";
 }
 
 // Scroll Animation
