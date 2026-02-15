@@ -125,6 +125,15 @@ nav{
 .about{
     background:#ffffff;
 }
+.secondary-btn{
+    background:#004d40;
+    margin-left:15px;
+}
+
+.secondary-btn:hover{
+    background:#00251a;
+}
+
 
 /* Footer */
 footer{
@@ -166,6 +175,10 @@ footer{
         Temperature, and Electrical Conductivity (EC) and sends it to a mobile application.
     </p>
     <button class="btn" onclick="scrollToSection()">Explore Features</button>
+    <button class="btn secondary-btn" onclick="openGuide()">
+    Smart Parameter Guide
+    </button>
+
 </section>
 
 <section class="section fade-in" id="features">
@@ -216,6 +229,9 @@ footer{
 <script>
 function scrollToSection(){
     document.getElementById("features").scrollIntoView({behavior:"smooth"});
+}
+function openGuide(){
+    alert("Smart Parameter Guide coming soon! 🚀\n\nThis will display real-time monitoring dashboard once API is integrated.");
 }
 
 // Scroll Animation
