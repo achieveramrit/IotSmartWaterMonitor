@@ -22,14 +22,59 @@ body{
 }
 
 /* Navbar */
+
 nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:30px 8%;
+    padding:20px 5%;
     background:white;
     box-shadow:0 4px 10px rgba(0,0,0,0.05);
+    flex-wrap:wrap;
 }
+@media (max-width: 768px){
+    nav{
+        flex-direction:column;
+        text-align:center;
+        gap:10px;
+    }
+
+    .founder{
+        font-size:12px;
+    }
+}
+@media (max-width: 768px){
+    .hero{
+        padding:60px 15px;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .btn{
+        width:100%;
+        margin-top:15px;
+    }
+
+    .secondary-btn{
+        margin-left:0;
+    }
+}
+@media (max-width: 768px){
+    .cards{
+        grid-template-columns:1fr;
+    }
+}
+.btn{
+    padding:14px 20px;
+    font-size:16px;
+}
+
 
 .logo{
     display:flex;
@@ -43,6 +88,54 @@ nav{
 .logo img{
     height:80px;
     width:auto;
+}
+.uses-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.uses-text{
+    flex:1;
+    min-width:280px;
+}
+
+.uses-text ul{
+    list-style:none;
+    font-size:18px;
+    line-height:2;
+}
+
+.uses-text li{
+    background:#ffffff;
+    margin-bottom:10px;
+    padding:10px 15px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.uses-image{
+    flex:1;
+    min-width:280px;
+    text-align:center;
+}
+
+.uses-image img{
+    max-width:100%;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+@media (max-width:768px){
+    .uses-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .uses-text ul{
+        font-size:16px;
+    }
 }
 
 
@@ -168,10 +261,10 @@ footer{
 </nav>
 
 <section class="hero">
-    <h1>Smart IoT-Based Water Quality Monitoring</h1>
+    <h1>Smart IoT Plus PLC kit Based Multi parameter Monitoring</h1>
     <p>
-        RuralReact is an advanced ESP32-based IoT device designed for real-time
-        water quality monitoring. It senses and collects data including pH, ORP,
+        RuralReact is an advanced ESP32-based IoT plus PLC device designed for real-time
+        multi-parameter quality monitoring. It senses and collects data including pH, ORP,
         Temperature, and Electrical Conductivity (EC) and sends it to a mobile application.
     </p>
     <button class="btn" onclick="scrollToSection()">Explore Features</button>
@@ -208,18 +301,39 @@ footer{
     <p style="max-width:800px;margin:auto;">
         The RuralReact device is powered by ESP32 microcontroller technology.
         It collects sensor data and transmits it wirelessly to a dedicated
-        mobile application. Users can monitor live water quality parameters,
-        view historical data, and receive alerts if water conditions exceed safe limits.
+        mobile application. Users can monitor live multi-parameter data,
+        view historical, graphical data, and receive alerts if quality conditions exceed safe limits.
     </p>
 </section>
 
 <section class="section fade-in">
     <h2>Mobile Application Integration</h2>
     <p style="max-width:800px;margin:auto;">
-        Our IoT-based mobile application provides real-time dashboards,
+        Our IoT plus PLC based mobile application provides real-time dashboards,
         graphical reports, and notifications. This enables rural communities,
         farmers, and water treatment systems to ensure clean and safe water.
     </p>
+</section>
+<section class="section fade-in" id="uses">
+    <h2>Applications of RuralReact</h2>
+
+    <div class="uses-container">
+        <div class="uses-text">
+            <ul>
+                <li>🌱 Hydroponic Farming</li>
+                <li>🏭 Waste Water Treatment</li>
+                <li>🧼 Soap Manufacturing</li>
+                <li>🎨 Dye Industries</li>
+                <li>🧴 Phenyl Production</li>
+                <li>🧽 Detergent Manufacturing</li>
+                <li>🫧 Liquid Detergent Industries</li>
+            </ul>
+        </div>
+
+        <div class="uses-image">
+            <img src="water-use.jpeg" alt="Water Monitoring Applications">
+        </div>
+    </div>
 </section>
 
 <footer>
