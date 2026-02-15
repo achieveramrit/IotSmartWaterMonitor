@@ -305,6 +305,59 @@ footer{
 .legal-section button{
     margin-top:20px;
 }
+.why-container{
+    max-width:800px;
+    margin:auto;
+    text-align:left;
+}
+
+.why-container ul{
+    list-style:none;
+    line-height:2;
+    font-size:18px;
+}
+
+.why-container li{
+    background:#ffffff;
+    margin-bottom:12px;
+    padding:12px 18px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.why-note{
+    margin-top:20px;
+    font-weight:500;
+    text-align:center;
+}
+.vision-mission{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.vm-box{
+    background:#ffffff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    flex:1;
+    min-width:280px;
+}
+#contact p{
+    font-size:18px;
+    margin:8px 0;
+}
+@media (max-width:768px){
+    .why-container ul{
+        font-size:16px;
+    }
+
+    .vm-box{
+        padding:20px;
+    }
+}
 
 
 </style>
@@ -320,7 +373,7 @@ footer{
 </nav>
 
 <section class="hero">
-    <h1>Smart IoT Plus PLC kit Based Multi parameter Monitoring</h1>
+    <h1>Smart IoT + PLC kit Based Multi parameter Monitoring</h1>
     <h3 class="motto">
     Designed for Rural MSME, ETP, Hydroponic & Chemical Units
     </h3>
@@ -379,7 +432,7 @@ footer{
 <section class="section fade-in">
     <h2>Mobile Application Integration</h2>
     <p style="max-width:800px;margin:auto;">
-        Our IoT plus PLC based mobile application provides real-time dashboards,
+        Our IoT + PLC based mobile application provides real-time dashboards,
         graphical reports, and notifications. This enables rural communities,
         farmers, and water treatment systems to ensure clean and safe water.
     </p>
@@ -405,6 +458,45 @@ footer{
         </div>
     </div>
 </section>
+<section class="section fade-in" id="why">
+    <h2>Why RuralReact is Different</h2>
+
+    <div class="why-container">
+        <ul>
+            <li>✔ Multi-parameter monitoring in one platform</li>
+            <li>✔ Dual industrial + rural deployment model</li>
+            <li>✔ Plug-and-play sensor modularity</li>
+            <li>✔ Built-in compliance monitoring capability</li>
+            <li>✔ Low-cost design suitable for MSMEs</li>
+        </ul>
+
+        <p class="why-note">
+            This makes RuralReact suitable for both advanced industries and rural users.
+        </p>
+    </div>
+</section>
+<section class="section about fade-in" id="vision">
+    <h2>Our Vision & Mission</h2>
+
+    <div class="vision-mission">
+        <div class="vm-box">
+            <h3>Vision</h3>
+            <p>
+                To make chemical monitoring accessible to rural industries and farmers 
+                through affordable smart technology.
+            </p>
+        </div>
+
+        <div class="vm-box">
+            <h3>Mission</h3>
+            <p>
+                To reduce pollution, improve product quality, and enable data-driven 
+                chemical monitoring across India.
+            </p>
+        </div>
+    </div>
+</section>
+
 <section id="termsSection" class="legal-section">
     <h2>Terms of Use – RuralReact</h2>
     <ul>
@@ -424,6 +516,11 @@ footer{
         We do not sell or share data with third parties without consent.
     </p>
     <button class="btn" onclick="closeLegal()">Close</button>
+</section>
+<section class="section fade-in" id="contact">
+    <h2>Contact RuralReact</h2>
+    <p><strong>Founder:</strong> Pranav Prajapati</p>
+    <p><strong>Email:</strong> pranavprajapati0007@gmail.com</p>
 </section>
 
 <footer>
